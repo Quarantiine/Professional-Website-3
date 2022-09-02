@@ -210,7 +210,6 @@ body .nav-toggle {
 }
 @media screen and (max-width: 1240px) {
   body .nav .sub-nav {
-    width: 100%;
     flex-flow: column;
     align-items: center;
     display: flex;
