@@ -9,7 +9,8 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: hidden;
   background-color: white;
   width: 100%;
 }
