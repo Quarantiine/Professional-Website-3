@@ -273,9 +273,8 @@ body {
 	@media screen and (max-width: 1240px) {
 
 		.nav {
-	
+			width: 100%;
 			.sub-nav {
-				width: 100%;
 				@include nav-display-template(
 					$ff: column,
 					$g: 0px
