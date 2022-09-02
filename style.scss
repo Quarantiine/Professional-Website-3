@@ -17,7 +17,8 @@ $dc1-hover: #E44F2A;
 // ----------
 
 body {
-	overflow-x: hidden;
+	overflow: hidden;
+  	overflow-y: hidden;
 	background-color: white;
 	width: 100%;
 
