@@ -6,11 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  display: grid;
 }
 
 body {
-  overflow: hidden;
-  overflow-y: scroll;
+  display: block;
+  overflow-x: hidden;
   background-color: white;
   width: 100%;
 }
@@ -211,6 +212,7 @@ body .nav-toggle {
 }
 @media screen and (max-width: 1240px) {
   body .nav .sub-nav {
+    width: 100%;
     flex-flow: column;
     align-items: center;
     display: flex;
@@ -2188,4 +2190,8 @@ body .parent-footer .sub-parent-footer-2 .bottom-footer-links a:hover {
     height: fit-content;
     padding-bottom: 50px;
   }
+}
+
+script {
+  display: none;
 }
