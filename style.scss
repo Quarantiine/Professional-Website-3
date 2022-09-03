@@ -9,6 +9,11 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	display: grid;
+}
+
+@media screen and (max-width: 1150px) {
+	
 }
 
 // Variables ===: 
@@ -17,8 +22,8 @@ $dc1-hover: #E44F2A;
 // ----------
 
 body {
-	overflow: hidden;
-  	overflow-y: scroll;
+	display: block;
+	overflow-x: hidden;
 	background-color: white;
 	width: 100%;
 
@@ -274,8 +279,9 @@ body {
 	@media screen and (max-width: 1240px) {
 
 		.nav {
-			width: 100%;
+	
 			.sub-nav {
+				width: 100%;
 				@include nav-display-template(
 					$ff: column,
 					$g: 0px
@@ -2630,4 +2636,8 @@ body {
 			padding-bottom: 50px;
 		}
 	}
+}
+
+script {
+	display: none;
 }
