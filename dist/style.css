@@ -853,7 +853,7 @@ body .parent-content-container .content-section-3 .cs-container .csc-box-contain
   width: fit-content;
   border-radius: 100%;
   margin: auto;
-  z-index: 3;
+  z-index: 0;
   opacity: 0;
   cursor: pointer;
 }
