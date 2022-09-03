@@ -9,7 +9,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	display: grid;
 }
 
 @media screen and (max-width: 1150px) {
@@ -22,7 +21,9 @@ $dc1-hover: #E44F2A;
 // ----------
 
 body {
-	overflow-x: hidden;
+	display: block;
+	overflow: hidden;
+	overflow-y: scroll;
 	background-color: white;
 	width: 100%;
 
@@ -114,7 +115,7 @@ body {
 	}
 
 	.nav {
-		z-index: 6;
+		z-index: 2;
 		position: fixed;
 		top: 0px;
 		width: 100%;
@@ -1038,7 +1039,7 @@ body {
 							width: fit-content;
 							border-radius: 100%;
 							margin: auto;
-							z-index: 0;
+							z-index: 3;
 							opacity: 0;
 							cursor: pointer;
 						}
@@ -2214,188 +2215,6 @@ body {
 			@media screen and (max-width: 700px) {
 				.content-section-6c {
 					height: 800px;
-				}
-			}
-		}
-
-		.content-section-7 {
-			display: flex;
-			flex-flow: column;
-			justify-content: center;
-			align-items: center;
-			gap: 50px;
-			
-			.cs7-title-container {
-				text-align: center;
-				display: flex;
-				flex-flow: column;
-				gap: 10px;
-
-				h3 {
-					font-size: 16px;
-					color: $dc1;
-				}
-
-				h1 {
-					font-size: 40px;
-					color: #111;
-
-					i {
-						font-size: 40px;
-						color: $dc1;
-					}
-				}
-			}
-
-			.cs7-slide-show-parent-container {
-				display: flex;
-				flex-flow: row;
-				justify-content: center;
-				align-items: center;
-				gap: 50px;
-				
-				.cs7-arrow-btn {
-					background-color: $dc1;
-					padding: 15px;
-					border-radius: 100%;
-					display: flex;
-					flex-flow: column;
-					justify-content: center;
-					align-items: center;
-					cursor: pointer;
-					opacity: 0;
-					user-select: none;
-
-					span {
-						color: white;
-						font-size: 30px;
-					}
-				} .cs7-arrow-btn:hover {
-					background-color: $dc1-hover;
-				}
-
-				@media screen and (max-width: 1330px) {
-					.cs7-arrow-btn {
-						display: none;
-					}
-				}
-
-				.leftA {
-					transform: rotate(180deg);
-				}
-
-				%cs7-slide-show-container-overflow-template {
-					overflow: hidden;
-					overflow-x: scroll;
-					scroll-snap-type: x mandatory;
-				} %cs7-slide-show-container-overflow-template::-webkit-scrollbar {
-					height: 0px;
-				}
-				.cs7-slide-show-container {
-					display: grid;
-					grid-template-columns: auto auto auto auto auto;
-					padding: 20px;
-					// border: 1px solid $dc1;
-					width: 1100px;
-					gap: 30px;
-					@extend %cs7-slide-show-container-overflow-template;
-
-					.cs7-ss-box {
-						width: 350px;
-						height: 480px;
-						background-color: transparent;
-						scroll-snap-align: center;
-
-						.cs7-img-section {
-							width: 100%;
-
-							img {
-								width: 100%;
-							}
-						}
-
-						.cs7-content-section {
-							background-color: white;
-							box-shadow: 0px 0px 20px rgba($color: #000000, $alpha: 0.1);
-							display: flex;
-							flex-flow: column;
-							justify-content: center;
-							align-items: flex-start;
-							padding: 40px 20px;
-							gap: 20px;
-							width: 320px;
-							position: relative;
-							bottom: 100px;
-				
-							h1 {
-								font-size: 20px;
-							}
-
-							.icon-para {
-								display: flex;
-								flex-flow: row;
-								justify-content: start;
-								align-items: center;
-								gap: 10px;
-
-								.icon-para-item {
-									font-size: 16px;
-									color: #888;
-									display: flex;
-									flex-flow: row;
-									justify-content: start;
-									align-items: center;
-									gap: 3px;
-
-									span {
-										font-size: 16px;
-										color: $dc1;
-										font-weight: 700;
-									}
-								}
-
-								.icon-para-item-2 {
-									font-size: 16px;
-									color: #444;
-									display: flex;
-									flex-flow: row;
-									justify-content: start;
-									align-items: center;
-									gap: 3px;
-
-									span {
-										font-size: 16px;
-										color: $dc1;
-										font-weight: 700;
-									}
-								}
-							}
-
-							p {
-								font-size: 19px;
-								color: #555;
-							}
-						}
-					}
-				}
-
-				@media screen and (max-width: 1150px) {
-					
-					.cs7-slide-show-container {
-						width: 30%;
-					}
-				}
-
-				@media screen and (max-width: 1150px) {
-					
-					.cs7-slide-show-container {
-						width: 20%;
-					}
-				}
-			} .cs7-slide-show-parent-container:hover {
-				
-				.cs7-arrow-btn {
-					opacity: 1;
 				}
 			}
 		}
