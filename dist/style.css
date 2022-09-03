@@ -6,11 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  display: grid;
 }
 
 body {
-  overflow-x: hidden;
+  display: block;
+  overflow: hidden;
+  overflow-y: scroll;
   background-color: white;
   width: 100%;
 }
@@ -82,7 +83,7 @@ body .floating-icon-toggle {
   }
 }
 body .nav {
-  z-index: 6;
+  z-index: 2;
   position: fixed;
   top: 0px;
   width: 100%;
@@ -852,7 +853,7 @@ body .parent-content-container .content-section-3 .cs-container .csc-box-contain
   width: fit-content;
   border-radius: 100%;
   margin: auto;
-  z-index: 0;
+  z-index: 3;
   opacity: 0;
   cursor: pointer;
 }
@@ -1848,160 +1849,6 @@ body .parent-content-container .content-section-6 .content-section-6c .cs6c-cont
   body .parent-content-container .content-section-6 .content-section-6c {
     height: 800px;
   }
-}
-body .parent-content-container .content-section-7 {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-body .parent-content-container .content-section-7 .cs7-title-container {
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-  gap: 10px;
-}
-body .parent-content-container .content-section-7 .cs7-title-container h3 {
-  font-size: 16px;
-  color: #fa0368;
-}
-body .parent-content-container .content-section-7 .cs7-title-container h1 {
-  font-size: 40px;
-  color: #111;
-}
-body .parent-content-container .content-section-7 .cs7-title-container h1 i {
-  font-size: 40px;
-  color: #fa0368;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-arrow-btn {
-  background-color: #fa0368;
-  padding: 15px;
-  border-radius: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  opacity: 0;
-  user-select: none;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-arrow-btn span {
-  color: white;
-  font-size: 30px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-arrow-btn:hover {
-  background-color: #E44F2A;
-}
-@media screen and (max-width: 1330px) {
-  body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-arrow-btn {
-    display: none;
-  }
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .leftA {
-  transform: rotate(180deg);
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container {
-  overflow: hidden;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container::-webkit-scrollbar {
-  height: 0px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  padding: 20px;
-  width: 1100px;
-  gap: 30px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box {
-  width: 350px;
-  height: 480px;
-  background-color: transparent;
-  scroll-snap-align: center;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-img-section {
-  width: 100%;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-img-section img {
-  width: 100%;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section {
-  background-color: white;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 20px;
-  gap: 20px;
-  width: 320px;
-  position: relative;
-  bottom: 100px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section h1 {
-  font-size: 20px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section .icon-para {
-  display: flex;
-  flex-flow: row;
-  justify-content: start;
-  align-items: center;
-  gap: 10px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section .icon-para .icon-para-item {
-  font-size: 16px;
-  color: #888;
-  display: flex;
-  flex-flow: row;
-  justify-content: start;
-  align-items: center;
-  gap: 3px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section .icon-para .icon-para-item span {
-  font-size: 16px;
-  color: #fa0368;
-  font-weight: 700;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section .icon-para .icon-para-item-2 {
-  font-size: 16px;
-  color: #444;
-  display: flex;
-  flex-flow: row;
-  justify-content: start;
-  align-items: center;
-  gap: 3px;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section .icon-para .icon-para-item-2 span {
-  font-size: 16px;
-  color: #fa0368;
-  font-weight: 700;
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container .cs7-ss-box .cs7-content-section p {
-  font-size: 19px;
-  color: #555;
-}
-@media screen and (max-width: 1150px) {
-  body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container {
-    width: 30%;
-  }
-}
-@media screen and (max-width: 1150px) {
-  body .parent-content-container .content-section-7 .cs7-slide-show-parent-container .cs7-slide-show-container {
-    width: 20%;
-  }
-}
-body .parent-content-container .content-section-7 .cs7-slide-show-parent-container:hover .cs7-arrow-btn {
-  opacity: 1;
 }
 body .parent-footer {
   width: 100%;
