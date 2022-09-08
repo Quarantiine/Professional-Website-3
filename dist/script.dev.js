@@ -257,4 +257,34 @@ toggleBtns[2].addEventListener('click', function () {
   toggleBtns[2].classList.add('toggle-btn-toggle');
   toggleBtns[1].classList.remove('toggle-btn-toggle');
   toggleBtns[0].classList.remove('toggle-btn-toggle');
+}); // cs7-slide-show-container: =====
+
+var cs7SlideShowContainer = document.querySelector('.cs7-cs2-ic-slide-container');
+var cs7SsBox = document.querySelector('.slide-container-box');
+var cs7ArrowBtns1 = document.querySelector('.l-arr');
+var cs7ArrowBtns2 = document.querySelector('.r-arr');
+var n7 = 300;
+
+var cs7SlideShowSystem = function cs7SlideShowSystem() {
+  cs7SlideShowContainer.scrollTo(n7, 0);
+  n7 == 1500 ? n7 = 0 : n7 += 300; // console.log(n7)
+};
+
+setInterval(function () {
+  cs7SlideShowSystem();
+}, 10000);
+
+var cs7ArrowBtnsSystem = function cs7ArrowBtnsSystem() {
+  cs7SlideShowContainer.scrollBy(-300, 0);
+};
+
+var cs7ArrowBtnsSystem2 = function cs7ArrowBtnsSystem2() {
+  cs7SlideShowContainer.scrollBy(300, 0);
+};
+
+cs7ArrowBtns1.addEventListener('click', function () {
+  cs7ArrowBtnsSystem();
+});
+cs7ArrowBtns2.addEventListener('click', function () {
+  cs7ArrowBtnsSystem2();
 });
